@@ -1,5 +1,6 @@
 import { bootstrap } from "#bootstrap";
 import { Application } from "express";
+import { StatusCodes } from "http-status-codes";
 import request from "supertest";
 import http from "http";
 
@@ -27,11 +28,11 @@ describe("E2E - GET - '/user'", () => {
 
   test("should get a valid user", async () => {
     const response = await request(app).get("/user/1234");
-    expect(response.status).toBe(200);
+    expect(response.status).toBe(StatusCodes.OK);
   });
 
   test("shouldn't get a valid user", async () => {
     const response = await request(app).get("/user/123");
-    expect(response.status).toBe(404);
+    expect(response.status).toBe(StatusCodes.NOT_FOUND);
   });
 });

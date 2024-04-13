@@ -4,6 +4,7 @@ import { CreateUserRequest } from "#app/schemas/create-user";
 import { CreateUserUseCase } from "#app/use-cases/create-user/create-user";
 import { CreateUserUseCaseInput } from "#app/use-cases/create-user/create-user-input";
 import { Request, Response, NextFunction } from "express";
+import { StatusCodes } from "http-status-codes";
 
 export class CreateUserController implements Controller {
   constructor(private createUserUseCase: CreateUserUseCase) {}
@@ -16,13 +17,17 @@ export class CreateUserController implements Controller {
       const { username, password } = CreateUserRequest.parse(req.body);
       const input = new CreateUserUseCaseInput(username, password);
       const user = await this.createUserUseCase.execute(input);
-      res.status(201).send(user);
+      res.status(StatusCodes.CREATED).send(user);
     } catch (error) {
       if (error instanceof UserCantCreate) {
-        res.status(300).send({ message: "User cannot be created." });
+        res
+          .status(StatusCodes.UNAUTHORIZED)
+          .send({ message: "User cannot be created." });
         return;
       }
-      res.status(300).send({ message: "Unexpected error." });
+      res
+        .status(StatusCodes.INTERNAL_SERVER_ERROR)
+        .send({ message: "Unexpected error." });
     }
   }
 }
