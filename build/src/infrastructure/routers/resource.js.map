@@ -1,0 +1,1 @@
+{"version":3,"file":"resource.js","sourceRoot":"","sources":["../../../../src/infrastructure/routers/resource.ts"],"names":[],"mappings":";;;AACA,qCAAiC;AAEjC,MAAa,cAAc;IAGL;IAFb,MAAM,GAAG,IAAA,gBAAM,GAAE,CAAC;IAEzB,YAAoB,qBAAiC;QAAjC,0BAAqB,GAArB,qBAAqB,CAAY;QACnD,IAAI,CAAC,MAAM,CAAC,GAAG,CAAC,GAAG,EAAE,qBAAqB,CAAC,OAAO,CAAC,CAAC;IACtD,CAAC;CACF;AAND,wCAMC"}

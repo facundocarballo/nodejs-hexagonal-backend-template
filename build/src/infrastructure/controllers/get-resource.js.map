@@ -1,0 +1,1 @@
+{"version":3,"file":"get-resource.js","sourceRoot":"","sources":["../../../../src/infrastructure/controllers/get-resource.ts"],"names":[],"mappings":";;;AAGA,MAAa,qBAAqB;IAChC,KAAK,CAAC,OAAO,CACX,GAAY,EACZ,GAAa,EACb,IAAkB;QAElB,GAAG,CAAC,MAAM,CAAC,GAAG,CAAC,CAAC,IAAI,CAAC,EAAE,OAAO,EAAE,cAAc,EAAE,CAAC,CAAC;IACpD,CAAC;CACF;AARD,sDAQC"}
