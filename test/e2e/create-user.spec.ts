@@ -4,7 +4,6 @@ import request from "supertest";
 import http from "http";
 import { CreateUserUseCaseInput } from "#app/use-cases/create-user/create-user-input";
 import { CreateUserUserCaseInputMother } from "test/app/use-cases/create-user/create-user-input";
-import { UserCantCreate } from "#app/exceptions/user-cant-create";
 
 describe("E2E - CREATE - '/user'", () => {
   let app: Application;
