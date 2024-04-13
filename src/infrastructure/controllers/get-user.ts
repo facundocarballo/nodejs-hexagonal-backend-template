@@ -23,7 +23,7 @@ export class GetUserController implements Controller {
         res.status(404).send({ message: error.message });
         return;
       }
-      console.error("Unexpected error. ", error);
+      res.status(300).send({ message: "Unexpected error." });
     }
   }
 }

@@ -12,6 +12,12 @@ class UserLocalRepository {
         }
         return null;
     }
+    async save(username, password) {
+        if (username !== this.DEFAULT_USERNAME) {
+            return new user_1.User(username, password, "1235");
+        }
+        return null;
+    }
 }
 exports.UserLocalRepository = UserLocalRepository;
 //# sourceMappingURL=user-local-repository.js.map
