@@ -14,7 +14,7 @@ export function bootstrap(): Application {
   app.use(bodyParser.urlencoded({ extended: true }));
 
   // Routers
-  app.use("/resource", getRouter());
+  app.use("/user", getRouter());
 
   return app;
 }

@@ -39,7 +39,7 @@ function bootstrap() {
     app.use(bodyParser.json({ limit: "15mb" }));
     app.use(bodyParser.urlencoded({ extended: true }));
     // Routers
-    app.use("/resource", (0, _router_1.getRouter)());
+    app.use("/user", (0, _router_1.getRouter)());
     return app;
 }
 exports.bootstrap = bootstrap;
