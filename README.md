@@ -12,7 +12,4 @@ A brief description of what this app does.
 ## Test
 - Run `npm run test` to run all tests.
 
-## How to log?
-https://github.com/justomx/nodejs-commons/tree/main/packages/logger
-
 ## Documentation
