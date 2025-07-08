@@ -1,7 +1,7 @@
-import { bootstrap } from "#bootstrap";
+import { bootstrapApp } from "#bootstraps/app";
 
 async function init() {
-  const app = bootstrap();
+  const app = bootstrapApp();
   app.listen(8080, () => {
     console.log("Server listening on port 8080.");
   });

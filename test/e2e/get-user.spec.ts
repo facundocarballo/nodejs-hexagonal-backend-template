@@ -1,8 +1,8 @@
-import { bootstrap } from "#bootstrap";
 import { Application } from "express";
 import { StatusCodes } from "http-status-codes";
 import request from "supertest";
 import http from "http";
+import { bootstrapApp } from "#bootstraps/app";
 
 describe("E2E - GET - '/user'", () => {
   let app: Application;
@@ -10,7 +10,7 @@ describe("E2E - GET - '/user'", () => {
 
   beforeAll(() => {
     try {
-      app = bootstrap();
+      app = bootstrapApp();
       server = app.listen(8080);
     } catch (error) {
       console.error("Error creating the server: ", error);

@@ -1,9 +1,9 @@
 import express, { Application } from "express";
 import cors from "cors";
 import * as bodyParser from "body-parser";
-import { getRouter } from "#router";
+import { BootstrapUserRouter } from "./routers/user-router";
 
-export function bootstrap(): Application {
+export function bootstrapApp(): Application {
   const app: Application = express();
 
   app.disable("x-powered-by");
@@ -13,8 +13,10 @@ export function bootstrap(): Application {
   app.use(bodyParser.json({ limit: "15mb" }));
   app.use(bodyParser.urlencoded({ extended: true }));
 
+  const userRouter = BootstrapUserRouter.get()
+
   // Routers
-  app.use("/user", getRouter());
+  app.use("/user", userRouter.router);
 
   return app;
 }
