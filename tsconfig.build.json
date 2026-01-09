@@ -1,4 +1,18 @@
 {
     "extends": "./tsconfig.json",
-    "exclude": ["test"]
+    "compilerOptions": {
+        "lib": [
+            "ESNext",
+            "DOM"
+        ],
+        "skipLibCheck": true,
+        "outDir": "./build"
+    },
+    "exclude": [
+        "test"
+    ],
+    "include": [
+        "src/**/*",
+        "scripts/**/*"
+    ]
 }
