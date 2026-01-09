@@ -8,7 +8,7 @@ export class OpenTelemetryMetricBuilder implements MetricBuilder {
     constructor(private readonly meter: Meter) { }
 
     public create<Data extends MetricData>(name: string, description: string): Metric<Data> {
-        const counter = this.meter.createUpDownCounter(`name-ms.${name}.count`, {
+        const counter = this.meter.createUpDownCounter(`name_ms.${name}.count`, {
             description
         });
 
