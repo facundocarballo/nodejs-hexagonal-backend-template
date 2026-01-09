@@ -5,6 +5,7 @@ import { getNodeAutoInstrumentations } from '@opentelemetry/auto-instrumentation
 const exporter = new PrometheusExporter({
     port: 9464,
     endpoint: '/metrics',
+    host: '0.0.0.0'
 });
 
 const sdk = new NodeSDK({
