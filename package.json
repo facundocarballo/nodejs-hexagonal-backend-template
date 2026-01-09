@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc -p tsconfig.build.json && tsconfig-replace-paths -p tsconfig.build.json",
-    "start": "node build/src/index.js",
+    "start": "node -r ./build/scripts/open-telemetry.js build/src/index.js",
     "start:local": "npm run build && npm run start",
     "test": "jest --config jest.config.js --coverage",
     "check": "npm run build && npm run test"
